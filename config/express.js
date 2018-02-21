@@ -21,11 +21,12 @@ module.exports = function(){
     app.get('/cadastro', function(req, res){
         res.format({
             html:function(){
-                res.render('pages/CadastroProjeto/cadastro');
+                res.render('CadastroProjeto/cadastro');
             }
         })
     });
-    app.use(express.static(path.join(__dirname, 'webroot')));
+    app.use('/css',express.static('public/css'));
+    app.use('/js',express.static('public/js'));
     
     return app;
 }

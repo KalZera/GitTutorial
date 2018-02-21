@@ -1,5 +1,6 @@
 var express = require('express')
 var bodyParser = require('body-parser')
+var path = require('path')
 // var expressLayouts = require('express-ejs-layouts')
 
 module.exports = function(){
@@ -24,5 +25,7 @@ module.exports = function(){
             }
         })
     });
+    app.use(express.static(path.join(__dirname, 'webroot')));
+    
     return app;
 }

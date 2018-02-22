@@ -8,6 +8,7 @@
     <script src="jquery/jquery.js"></script>
     <script src="js/materialize.js"></script>
     <link rel="stylesheet" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
     
     <script>
         $(document).ready(function() {
@@ -67,9 +68,28 @@
         </div>
         </div>
 
+        <!-- linha de estado -->
+        <div class="row">
+        <div class="input-field col s12">
+            <select name="categoria" id="categoria">
+            <option value="" disabled selected>Estado</option>
+            <% estado.estados.forEach(function(item){ %>
+                <option value="<% item.sigla %>"><%= item.sigla %></option>
+            <% }) %>
+            </select>
+        </div>
+        </div>
+
+        <!-- botão concluir cadastro -->
+        <div class="row">
+        <div >
+            <button class="btn waves-effect waves-light blue" type="submit" name="actionnode">Cadastrar
+            <i class="material-icons right">send</i></button>
+        </div>
+        </div>
+        
 
     </form>
     </div>
-     <h4 class="truncate"> INSERIR FORMULARIO NESSA BAGAÇA</h4>
 </body>
 </html>

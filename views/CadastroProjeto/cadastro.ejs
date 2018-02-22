@@ -9,11 +9,11 @@
     <script src="js/materialize.js"></script>
     <link rel="stylesheet" href="css/materialize.css">
     
-    <!-- <script>
-    $( '#first_name').on( 'input', function() {
-        Materialize.updateTextFields();
-      } );
-    </script> -->
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
 </head>
 <body>
     <div class="card-panel blue white-text">Cadastro de Usuario</div>
@@ -43,7 +43,7 @@
         <div class="input-field col s12">
             <input id="password" type="password" class="validate" placeholder="Senha">
             <input id="passwordConf" type="password" class="validate" placeholder="Confirmar Senha">
-            <!-- <label for="password">Password</label> -->
+            <label for="password">Senha</label>
         </div>
         </div>
 

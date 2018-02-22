@@ -27,6 +27,9 @@ module.exports = function(){
     });
     app.use('/css',express.static('public/css'));
     app.use('/js',express.static('public/js'));
+    app.use('/tes',express.static('node_modules/materialize-css/dist'));
+    app.use('/fonts',express.static('public/fonts'));
+    app.use('/jquery',express.static('node_modules/jquery/dist'));
     
     return app;
 }

@@ -1,44 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="jquery/jquery.js"></script>
+    <script src="js/materialize.js"></script>
     <link rel="stylesheet" href="css/materialize.css">
+    
+    <!-- <script>
+    $( '#first_name').on( 'input', function() {
+        Materialize.updateTextFields();
+      } );
+    </script> -->
 </head>
 <body>
     <div class="card-panel blue white-text">Cadastro de Usuario</div>
 <div class="row">
     <form>
+        <!-- linha de nomes -->
         <div class="row">
         <div class="input-field col s6">
-            <input placeholder="Primeiro Nome" id="first_name" type="text" class="validate">
-            <!-- <label for="first_name" class ="left">Primeiro Nome</label> -->
+            <input placeholder="" id="first_name" type="text" class="validate">
+            <label for="first_name">Primeiro Nome</label>
         </div>
         <div class="input-field col s6">
             <input id="last_name" placeholder="Sobrenome" type="text" class="validate">
-            <!-- <label for="last_name">Sobrenome</label> -->
+            <label for="last_name">Sobrenome</label>
         </div>
         </div>
+        
+        <!-- linha de sobrenome -->
+        <div class="row">
         <div class="input-field col s10">
-            <div>
-              <input type="text" placeholder="Usuario" name="usuario" id="usuario">
-            </div>
+            <input type="text" placeholder="Usuario" name="usuario" id="usuario">
         </div>
+        </div>
+        
+        <!-- linha de senhas -->
         <div class="row">
         <div class="input-field col s12">
             <input id="password" type="password" class="validate" placeholder="Senha">
-            <input id="password" type="password" class="validate" placeholder="Confirmar Senha">
+            <input id="passwordConf" type="password" class="validate" placeholder="Confirmar Senha">
             <!-- <label for="password">Password</label> -->
         </div>
         </div>
+
+        <!-- linha de email -->
         <div class="row">
         <div class="input-field col s12">
             <input id="email" type="email" class="validate">
             <label for="email">Email</label>
         </div>
         </div>
+
+        <!-- linha de select -->
         <div class="row">
         <div class="input-field col s12">
             <!-- <label for="">Sexo:</label> -->
@@ -49,8 +66,10 @@
             </select>
         </div>
         </div>
+
+
     </form>
     </div>
-     <h1> INSERIR FORMULARIO NESSA BAGAÇA</h1>
+     <h4 class="truncate"> INSERIR FORMULARIO NESSA BAGAÇA</h4>
 </body>
 </html>

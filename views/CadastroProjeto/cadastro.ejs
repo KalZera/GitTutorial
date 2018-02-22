@@ -19,29 +19,30 @@
 <body>
     <div class="card-panel blue white-text">Cadastro de Usuario</div>
 <div class="row">
-    <form>
+    <form class="container">
         <!-- linha de nomes -->
         <div class="row">
         <div class="input-field col s6">
-            <input placeholder="" id="first_name" type="text" class="validate">
+            <input placeholder="Primeiro Nome" id="first_name" type="text" class="validate">
             <label for="first_name">Primeiro Nome</label>
         </div>
         <div class="input-field col s6">
             <input id="last_name" placeholder="Sobrenome" type="text" class="validate">
             <label for="last_name">Sobrenome</label>
         </div>
-        </div>
-        
-        <!-- linha de sobrenome -->
-        <div class="row">
+    </div>
+    
+    <!-- linha de Usuario -->
+    <div class="row">
         <div class="input-field col s10">
             <input type="text" placeholder="Usuario" name="usuario" id="usuario">
+            <label for="Usuario">Usuário</label>
         </div>
         </div>
         
         <!-- linha de senhas -->
         <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s12 m6 l6">
             <input id="password" type="password" class="validate" placeholder="Senha">
             <input id="passwordConf" type="password" class="validate" placeholder="Confirmar Senha">
             <label for="password">Senha</label>
@@ -61,8 +62,8 @@
         <div class="input-field col s12">
             <!-- <label for="">Sexo:</label> -->
             <select name="sexo" id="sexo">
-                <option value="" disabled selected>Sexo</option>
-                <option value="M">Masculino</option>
+                <option value=""  disabled selected>Sexo</option>
+                <option value="M" class="blue-text"> Masculino</option>
                 <option value="F">Feminino</option>
             </select>
         </div>
@@ -71,10 +72,10 @@
         <!-- linha de estado -->
         <div class="row">
         <div class="input-field col s12">
-            <select name="categoria" id="categoria">
+            <select name="categoria" id="categoria" class="black-text">
             <option value="" disabled selected>Estado</option>
             <% estado.estados.forEach(function(item){ %>
-                <option value="<% item.sigla %>"><%= item.sigla %></option>
+                <option class="black" value="<% item.sigla %>"><%= item.sigla %></option>
             <% }) %>
             </select>
         </div>
@@ -83,8 +84,9 @@
         <!-- botão concluir cadastro -->
         <div class="row">
         <div >
-            <button class="btn waves-effect waves-light blue" type="submit" name="actionnode">Cadastrar
-            <i class="material-icons right">send</i></button>
+            <button class="btn waves-effect waves-light blue" href="/Principal" name="actionnode">
+                Cadastrar
+            <i class="material-icons right">done</i></button>
         </div>
         </div>
         

@@ -20,13 +20,16 @@ module.exports = function(){
         })
     });
     app.get('/cadastro', function(req, res){
-        // console.log('model/estados-cidades.json');
         res.format({
             html:function(){
                 res.render('CadastroProjeto/cadastro');
             }
         })
     });
+
+    app.get('/Principal', function(req, res){
+        res.render('TelaPrincipal/home');
+    })
 
     app.use('/css',express.static('public/css'));
     app.use('/js',express.static('public/js'));

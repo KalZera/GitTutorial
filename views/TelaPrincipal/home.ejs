@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="css/materialize.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
     <script>
-        $(".button-collapse").sideNav();
+        $( document ).ready(function(){
+            $(".button-collapse").sideNav();
+        })
     </script>
     
 </head>
@@ -22,23 +24,20 @@
             <a href="#" data-activates="menu-mobile" class="button-collapse">
                 <i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li class="active"><a href="#">Sass</a></li>
-                <li><a href="#">Components</a></li>
-                <li><a href="#">JavaScript</a></li>
-                <li><a href="#">Components</a></li>
-                <li><a href="#">JavaScript</a></li>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Bares</a></li>
+                <li><a href="#">Ranks</a></li>
             </ul>
             </div>
         </nav>
     </div>
     <!-- menu mobile -->
     <ul id="menu-mobile" class="side-nav">
-        <li class="active" ><a href="#">Sass</a></li>
-        <li><a href="#">Components</a></li>
-        <li><a href="#">JavaScript</a></li>
-        <li><a href="#">Components</a></li>
-        <li><a href="#">JavaScript</a></li>
-        
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Eventos</a></li>
+            <li><a href="#">Bares</a></li>
+            <li><a href="#">Ranks</a></li>
     </ul>
 </body>
 </html>

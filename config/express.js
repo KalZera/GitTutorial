@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const app = express();
 // var expressLayouts = require('express-ejs-layouts')
 app.locals.estado = require('./../model/estado.json');
+const index = require('./../routes/index');
+
 
 module.exports = () => {
   app.set('view engine', 'ejs');
@@ -12,24 +14,9 @@ module.exports = () => {
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
 
-  app.get('/', (req, res) => {
-    res.format({
-      html() {
-        res.render('layout');
-      },
-    });
-  });
-  app.get('/cadastro', (req, res) => {
-    res.format({
-      html() {
-        res.render('CadastroProjeto/cadastro');
-      },
-    });
-  });
-
-  app.get('/Principal', (req, res) => {
-    res.render('TelaPrincipal/home');
-  });
+  app.use('/',index);
+  
+  
 
   app.use('/css', express.static('public/css'));
   app.use('/js', express.static('public/js'));

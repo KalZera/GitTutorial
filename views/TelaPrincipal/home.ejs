@@ -17,15 +17,17 @@
     
 </head>
 <body>
+        <!-- pagina padrão para outras: header e footer -->
     <div class="navbar-fixed">
-    <nav class="z-depth-0" > 
+    <nav class="z-depth-0 blue" > 
         <div class="nav-wrapper container"> 
-            <a href="/Principal" class="brand-logo right">Logo</a>
+            <a href="/Principal" class="brand-logo right">Logo 
+                <img src="/images/logo.jpeg" alt=""> </a>
             <a href="#" data-activates="menu-mobile" class="button-collapse">
                 <i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Eventos</a></li>
+                <li><a href="/Eventos">Eventos</a></li>
                 <li><a href="#">Bares</a></li>
                 <li><a href="#">Ranks</a></li>
             </ul>
@@ -35,20 +37,12 @@
     <!-- menu mobile -->
     <ul id="menu-mobile" class="side-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Eventos</a></li>
+            <li><a href="/Eventos">Eventos</a></li>
             <li><a href="#">Bares</a></li>
             <li><a href="#">Ranks</a></li>
-    </ul>
-
-    <!-- acrescentar os dados persistentes -->
-    <div class="collection">
-            <a href="" class="colletion-header black-text"> <h4>Eventos</h4></a>
-            <a href="#!" class="collection-item">evento 1</a>
-            <a href="#!" class="collection-item">evento 2</a>
-            <a href="#!" class="collection-item">evento 3</a>
-            <a href="#!" class="collection-item">evento 4</a>
-          </div>
-
+    </ul>    
+        <!-- div para exibir as paginas selecionadas -->
+    <div class="container" id="conteudo"></div>
 
 </body>
 </html>

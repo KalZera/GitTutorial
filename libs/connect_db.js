@@ -1,9 +1,6 @@
-let mongoose = require('mongoose');
-let db;
+const mongoose = require('mongoose');
 
-module.exports = () => {
-    if(!db){
-        db = mongoose.connect('mongodb://localhost/bares');
-    } 
-    return db;
-}
+mongoose.connect('mongodb://localhost/bares', { useMongoClient: true});
+mongoose.Promise = global.Promise;
+
+module.exports = mongoose;

@@ -1,5 +1,5 @@
-const app = require('./config/express')();
-const http = require('http').Server(app);
+const app = require('./config/express');
+const http = require('http').createServer(app);
 
 const port = 3000;
 

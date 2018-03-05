@@ -1,12 +1,12 @@
 const express = require('express');
-const User = require('../model/usuarios');
+const Usuario = require('../model/usuarios');
 
 const router = express.Router();
 
 router.post('/register', async (req, res) => {
-    console.log(req.client);
     try {
-        const user = await User.create(req, body);
+        console.log(Usuario);
+        const user = await Usuario.create(req, body);
 
         return res.send({ user });
 
